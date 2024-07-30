@@ -54,3 +54,9 @@ body{
     color: greenyellow;
     font-family: "Oswald", sans-serif;
 }
+@media (max-width : 500px) {
+    .blocks{
+        width: 300px;
+        height: 300px;
+    }
+}
