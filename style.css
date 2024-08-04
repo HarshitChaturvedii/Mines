@@ -1,10 +1,9 @@
-
 body{
     height: 100vh;
     margin: 0px;
     background-color: rgb(53, 48, 74);
     display: grid;
-    grid-template-columns: 1fr;
+    
     grid-template-rows: 1fr 4fr 1fr ;
 }
  
@@ -38,10 +37,12 @@ body{
     background-color: rgba(66, 77, 172, 0.37);
     background-repeat: no-repeat;
     background-position: center;
+    
 }
 .blocks div:hover{
      background-color: rgb(66, 77, 172);
      background-repeat: no-repeat;
+     cursor: pointer;
      
 }   
 
@@ -54,12 +55,33 @@ body{
     color: greenyellow;
     font-family: "Oswald", sans-serif;
 }
+
+button{
+    width: 130px;
+    height: 50px;
+    position: relative;
+    bottom: 10px;
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(12, 222, 152);
+    background-color: darkviolet;
+    border: 0px ;
+    border-radius: 20px ;
+}
+
+button:hover{
+    background-color: rgba(148, 0, 211, 0.299);
+    cursor: pointer;
+}
 @media (max-width : 500px) {
     .blocks{
         width: 300px;
         height: 300px;
     }
-        .footer{
+    .footer{
         margin-bottom: 70px;
+    }
+    .blocks div{
+        background-size: 0px;
     }
 }
