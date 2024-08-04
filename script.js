@@ -2,6 +2,11 @@ $(".blocks div").css("background-image","url(./Screenshot_2024-07-28_110553-remo
 $(".blocks div").css("background-position","center")
 $(".blocks div").css("background-size","120px")
 
+$("button").on("click", function(){
+  location.reload() 
+})
+
+
 var classArray = ["one" , "two" , "three" , "four" , "five" , "six" , "seven" , "eight" , "nine" , "ten" , "eleven" , "twelve" , "thirteen" , "fourteen" , "fifteen" , "sixteen"]
 var randomMines = []
 var inputVal = []
@@ -21,6 +26,7 @@ while(i<=6){
    var randomNumber = Math.floor(Math.random()*16);    
    randomMines.push(classArray[randomNumber]);
    var chosenMine = classArray[randomNumber];
+   console.log("chosenMine");
    classArray.splice(randomNumber , 1)
    $("."+ chosenMine).css("background-image","url(./bomb-5620656_960_720-removebg-preview.png)")
    $("."+ chosenMine).css("background-position","center")
@@ -33,14 +39,14 @@ var newArray = classArray
 $(".blocks div").css("background-size","0px")
 
 $(".blocks div").on("click", function mining(){
-  $(this).css("background-size","100px")
+  $(this).css("background-size","70px")
   let chosenDiv = $(this).attr("class")  
   inputVal.push(chosenDiv)
   $(this).css("pointer-events" , "none")
   if(randomMines.includes(chosenDiv)){
     $(this).css("background-color","red")
     $(".blocks div").css("pointer-events" , "none")
-    $(".blocks div").css("background-size","100px")
+    $(".blocks div").css("background-size","70px")
   }
   else{
     $(this).css("background-color","greenyellow")    
@@ -51,3 +57,4 @@ $(".blocks div").on("click", function mining(){
 })
 
 }
+
